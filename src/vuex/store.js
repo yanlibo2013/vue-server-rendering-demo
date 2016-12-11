@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 const defaultState = {
   topics: [],
-  count: 0
+  count: 0,
+  titie:"vue2 side rendering"
 }
 
 const inBrowser = typeof window !== 'undefined'

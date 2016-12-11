@@ -7,7 +7,8 @@ export function createListView (components,type) {
         name: `${type}-stories-view`,
         // this will be called during SSR to pre-fetch data into the store!
         preFetch (store) {
-            return store.dispatch('getTopics', { type })
+            //return store.dispatch('getTopics', { type })
+            return null;
         },
         render (h) {
             return h(components, { props: { type }})

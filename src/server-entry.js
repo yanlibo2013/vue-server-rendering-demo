@@ -24,10 +24,7 @@ export default context => {
   // which is resolved when the action is complete and store state has been
   // updated.
   return Promise.all(matchedComponents.map(component => {
-    console.log("componet");
-    console.log(component);
     if (component.preFetch) {
-      console.log("preFetch");
       return component.preFetch(store)
     }
   })).then(() => {
@@ -39,8 +36,6 @@ export default context => {
     // store to pick-up the server-side state without having to duplicate
     // the initial data fetching on the client.
     context.initialState = store.state
-    console.log("then");
-    console.log(store.state);
     return app
   })
 }
